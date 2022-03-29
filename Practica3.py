@@ -24,7 +24,7 @@ def imprimir_matriz(m, n, list):
             print(list[i][j], end=' ')
         print('\n')
 
-# variables
+# variables 
 
 
 filas = 7
@@ -37,7 +37,7 @@ matriz = crear_matriz(filas, columnas)
 rellenar_matriz(filas, columnas, matriz)
 # imprimir_matriz(filas,columnas,matriz)
 noParedes = random.randint(5, 10)
-nofantasmas = random.randint(1, 6)
+nofantasmas = random.randint(1, 5)
 noPremios = random.randint(3, 6)
 noPac = 1
 salir = False
@@ -57,12 +57,13 @@ while salir == False:
     opcion = input()
 
     if opcion == '2':
+        print('Vuelve pronto')
         salir = True
     elif opcion == '1':
         rellenar_matriz(filas, columnas, matriz)
         # Implementando premios y demas
         noParedes = random.randint(5, 10)
-        nofantasmas = random.randint(1, 6)
+        nofantasmas = random.randint(1, 5)
         noPremios = random.randint(3, 6)
         puntajeMaximo = noPremios*10
         noPac = 1
@@ -129,23 +130,21 @@ while salir == False:
                 if vidas == 0:
                     matriz[posActualX][posActualY] = PACMAN
                     matriz[posAntiguaX][posAntiguaY] = ' '
-                    imprimir_matriz(filas, columnas, matriz)
-                    print('Has Perdido')
                     print('Usuario: ', nombreUsuario)
                     print('Punteo: ', Score)
-                    
+                    imprimir_matriz(filas, columnas, matriz)
+                    print('Has Perdido')                 
                     exit = True
                 if matriz[posActualX][posActualY] == PREMIO:
                     Score = Score + 10
                 if Score == puntajeMaximo:
                     matriz[posActualX][posActualY] = PACMAN
                     matriz[posAntiguaX][posAntiguaY] = ' '
+                    print('Usuario: ', nombreUsuario)
+                    print('Punteo: ', Score)
                     imprimir_matriz(filas, columnas, matriz)
                     print('FELICIDADES')
                     print('HAS GANADAO')
-                    print('Usuario: ', nombreUsuario)
-                    print('Punteo: ', Score)
-                    
                     exit = True
                 if matriz[posActualX][posActualY] == FANTASMA or matriz[posActualX][posActualY] == PREMIO or matriz[posActualX][posActualY].isspace():
                     matriz[posActualX][posActualY] = PACMAN
@@ -161,10 +160,10 @@ while salir == False:
                             if vidas == 0:
                                 matriz[posActualX][posActualY] = PACMAN
                                 matriz[posAntiguaX][posAntiguaY] = ' '
-                                imprimir_matriz(filas, columnas, matriz)
-                                print('Has Perdido')
                                 print('Usuario: ', nombreUsuario)
                                 print('Punteo: ', Score)
+                                imprimir_matriz(filas, columnas, matriz)
+                                print('Has Perdido')                                
                                 exit = True
                                 
                         if matriz[posActualX][posActualY] == PREMIO:
@@ -172,11 +171,11 @@ while salir == False:
                         if Score == puntajeMaximo:
                             matriz[posActualX][posActualY] = PACMAN
                             matriz[posAntiguaX][posAntiguaY] = ' '
+                            print('Usuario: ', nombreUsuario)
+                            print('Punteo: ', Score)
                             imprimir_matriz(filas, columnas, matriz)
                             print('FELICIDADES')
                             print('HAS GANADAO')
-                            print('Usuario: ', nombreUsuario)
-                            print('Punteo: ', Score)
                             exit = True
                         
                         if matriz[posActualX][posActualY] == PARED:
@@ -193,10 +192,10 @@ while salir == False:
                             if vidas == 0:
                                 matriz[posActualX][posActualY] = PACMAN
                                 matriz[posAntiguaX][posAntiguaY] = ' '
-                                imprimir_matriz(filas, columnas, matriz)
-                                print('Has Perdido')
                                 print('Usuario: ', nombreUsuario)
                                 print('Punteo: ', Score)
+                                imprimir_matriz(filas, columnas, matriz)
+                                print('Has Perdido')
                                 exit = True
                                 
                         if matriz[posActualX][posActualY] == PREMIO:
@@ -204,11 +203,11 @@ while salir == False:
                         if Score == puntajeMaximo:
                             matriz[posActualX][posActualY] = PACMAN
                             matriz[posAntiguaX][posAntiguaY] = ' '
+                            print('Usuario: ', nombreUsuario)
+                            print('Punteo: ', Score)
                             imprimir_matriz(filas, columnas, matriz)
                             print('FELICIDADES')
                             print('HAS GANADAO')
-                            print('Usuario: ', nombreUsuario)
-                            print('Punteo: ', Score)
                             exit = True
                         
                         if matriz[posActualX][posActualY] == PARED:
@@ -226,10 +225,10 @@ while salir == False:
                             if vidas == 0:
                                 matriz[posActualX][posActualY] = PACMAN
                                 matriz[posAntiguaX][posAntiguaY] = ' '
-                                imprimir_matriz(filas, columnas, matriz)
-                                print('Has Perdido')
                                 print('Usuario: ', nombreUsuario)
                                 print('Punteo: ', Score)
+                                imprimir_matriz(filas, columnas, matriz)
+                                print('Has Perdido')
                                 exit = True
                                 
                         if matriz[posActualX][posActualY] == PREMIO:
@@ -237,11 +236,11 @@ while salir == False:
                         if Score == puntajeMaximo:
                             matriz[posActualX][posActualY] = PACMAN
                             matriz[posAntiguaX][posAntiguaY] = ' '
+                            print('Usuario: ', nombreUsuario)
+                            print('Punteo: ', Score)
                             imprimir_matriz(filas, columnas, matriz)
                             print('FELICIDADES')
                             print('HAS GANADAO')
-                            print('Usuario: ', nombreUsuario)
-                            print('Punteo: ', Score)
                             exit = True
                         
                         if matriz[posActualX][posActualY] == PARED:
@@ -258,10 +257,10 @@ while salir == False:
                             if vidas == 0:
                                 matriz[posActualX][posActualY] = PACMAN
                                 matriz[posAntiguaX][posAntiguaY] = ' '
-                                imprimir_matriz(filas, columnas, matriz)
-                                print('Has Perdido')
                                 print('Usuario: ', nombreUsuario)
                                 print('Punteo: ', Score)
+                                imprimir_matriz(filas, columnas, matriz)
+                                print('Has Perdido')
                                 exit = True
                                 
                         if matriz[posActualX][posActualY] == PREMIO:
@@ -269,11 +268,11 @@ while salir == False:
                         if Score == puntajeMaximo:
                             matriz[posActualX][posActualY] = PACMAN
                             matriz[posAntiguaX][posAntiguaY] = ' '
-                            imprimir_matriz(filas, columnas, matriz)
-                            print('FELICIDADES')
-                            print('HAS GANADAO')
                             print('Usuario: ', nombreUsuario)
                             print('Punteo: ', Score)
+                            imprimir_matriz(filas, columnas, matriz)
+                            print('FELICIDADES')
+                            print('HAS GANADAO')                            
                             exit = True
                         
                         if matriz[posActualX][posActualY] == PARED:
@@ -285,6 +284,3 @@ while salir == False:
                             matriz[posAntiguaX][posAntiguaY] = ' '
     else:
         print('Ingrese una opcion valida')
-
-
-# print(nombreUsuario)
